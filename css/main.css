@@ -1,0 +1,264 @@
+*{
+    box-sizing: border-box;
+    padding: 0 ; 
+    margin: 0;
+    font-family: sans-serif;
+}
+
+:root{
+    --section-padding:60px;
+    --main-color:#00c7fc;
+}
+
+.landing{
+    
+    background-size: cover;
+    height: 100vh;
+    background-image: url(../imgs/landing.jpg);
+}
+.landing .dark-layer{
+    background-color: rgba(0, 0, 0, 0.55);
+    height: 100vh;
+    color: white;
+    
+    padding-right: 0px;
+    padding-left: 0px;
+}
+.navbar{
+    display: flex;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+
+.navbar .logo img{
+    width: 124px;
+    height: 40px;
+    
+}
+.navbar .links ul:first-child{
+    list-style: none;
+    display: inline-flex;
+    gap: 30px;
+}
+.navbar .links ul:first-child a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    transition: 0.3s;
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.navbar .links ul:first-child a:after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 30px);
+    height: 1px;
+    background-color: white;
+    top: 77.5px;
+    left: -15px;
+}
+
+.navbar .links ul:first-child a:hover{
+    color: var(--main-color);
+}
+
+.navbar .links ul:first-child a:hover::after{
+    background-color: var(--main-color);
+}
+
+.navbar .links ul:first-child li:last-child{
+    font-size: 20px;
+    padding-top: 23px;
+    padding-bottom: 30px;
+    position: relative;
+}
+
+.navbar .links ul:first-child li:last-child::before{
+    content: "";
+    height: calc(30%);
+    width: 1px;
+    background-color: white;
+    left: -13px;
+    position: absolute;
+}
+.links{
+    position: relative;
+}
+.links .mobile-buttons{
+    display: none;
+}
+
+.menu-button{
+    font-size: 20px;
+    padding: 20px;
+}
+
+
+
+.search{
+    font-size: 20px;
+    padding: 20px;
+}
+.links .mobile-list {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100vw;
+    right: -20px;
+    top: 64px;
+    background-color: rgba(0, 0, 0, 0.55);
+    color: white;
+    z-index: 100;
+}
+
+.links .mobile-list li a {
+    display: block;
+   text-decoration: none;
+    padding: 15px 20px 15px 20px;
+    color: white;
+    transition: 0.3s;
+    border-bottom: 1px solid transparent;
+}
+
+.links .mobile-list li a:hover{
+    color: var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
+.landing .landing-content{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    position: relative;
+    height:  calc(100vh - 92px);
+    display: flex;
+    align-items: center;
+}
+
+.landing-content .landing-card{
+    padding: 50px 50px 30px 200px;
+    width: 50%;
+    background-color: 	rgb(0,197,252,0.5);
+}
+
+.landing-card h2 {
+    line-height: 1.5;
+    font-size: 36px;
+}
+
+.landing-card p{
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.dots , .left-arrow , .right-arrow{
+    position: absolute;
+}
+
+.dots{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 40px;
+    bottom: 0;
+    font-size: 20px;
+}
+
+.dots i:nth-child(2){
+    color: var(--main-color);
+}
+
+.left-arrow{
+    padding: 40px;
+    height: 100%;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+}
+
+.right-arrow{
+    padding: 40px;
+    height: 100%;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+}
+.mobile-buttons:hover ~ .mobile-list{
+    display: flex;
+}
+
+@media (max-width:1010px) {
+    .landing-content .landing-card {
+        padding: 50px 50px 30px 90px;
+    }
+
+    .landing-card h2 {
+        line-height: 1.5;
+        font-size: 26px;
+    }
+    .landing-card p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+}
+@media (max-width : 768px){
+    .landing-content .landing-card {
+        width: auto;
+    }
+    .navbar .links ul:first-child{
+        display: none;
+    }
+    .left-arrow{
+        display: none;
+    }
+    
+    .right-arrow{
+        display: none;
+    }
+
+    .links .mobile-buttons
+     {
+        display: flex;
+     } 
+}
+
+
+
+.container{
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+@media (min-width : 768px) {
+    .container{
+        width: 750px;
+    }
+}
+
+@media (min-width : 992px) {
+    .container{
+        width: 970px;
+    }
+}
+
+
+@media (min-width : 1200px) {
+    .container{
+        width: 1170px;
+    }
+}
