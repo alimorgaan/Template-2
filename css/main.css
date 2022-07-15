@@ -2,7 +2,7 @@
     box-sizing: border-box;
     padding: 0 ; 
     margin: 0;
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 :root{
@@ -151,7 +151,7 @@
 
 .landing-card h2 {
     line-height: 1.5;
-    font-size: 36px;
+    font-size: 34px;
 }
 
 .landing-card p{
@@ -219,6 +219,7 @@
 @media (max-width : 768px){
     .landing-content .landing-card {
         width: auto;
+        padding: 30px;
     }
     .navbar .links ul:first-child{
         display: none;
@@ -237,6 +238,82 @@
      } 
 }
 
+/* start services */
+.services{
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: white;
+    text-align: center;
+}
+.services .container .heading-line{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    
+}
+
+.services .container h1{
+    font-weight: 300;
+    font-size: 40px;
+}
+.services .container .heading-line span{
+    width: 50px;
+    height: 1.5px;
+    background-color: black;
+    display: inline-block;
+}
+
+.services .container .heading-line + p {
+    color: #908e8e;
+    font-size: 16px;
+    margin-bottom: 60px;
+}
+
+.services .container .content{
+    text-align: unset;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 30px;
+}
+.services .container .content .card{
+    text-align: left;
+    display: flex;
+    gap: 30px;
+}
+
+.services .container .content .card .icon{
+    font-size: 50px;
+}
+
+.services .container .content .card .text h3{
+    color: var(--main-color);
+    margin-bottom: 30px;
+}
+
+.services .container .content .card .text p{
+    color: #908e8e;
+    line-height: 1.5;
+}
+
+@media (max-width : 992px) {
+    .services .container .content{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width : 768px) {
+    .services .container .content .card{
+        text-align: center;
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+/* end services */
+
 
 
 .container{
@@ -244,6 +321,9 @@
     padding-left: 20px;
     padding-right: 20px;
 }
+
+
+
 @media (min-width : 768px) {
     .container{
         width: 750px;
