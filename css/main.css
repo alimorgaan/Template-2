@@ -245,7 +245,7 @@
     background-color: white;
     text-align: center;
 }
-.services .container .heading-line{
+.heading-line{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -257,14 +257,14 @@
     font-weight: 300;
     font-size: 40px;
 }
-.services .container .heading-line span{
+.heading-line span{
     width: 50px;
     height: 1.5px;
     background-color: black;
     display: inline-block;
 }
 
-.services .container .heading-line + p {
+ .heading-line + p {
     color: #908e8e;
     font-size: 16px;
     margin-bottom: 60px;
@@ -314,7 +314,265 @@
 }
 /* end services */
 
+/* start our */
+    .our{
+        background-image: url(../imgs/design-features.jpg);
+        background-size: cover;
+        overflow: hidden;
+        
+       
+    }
+    .our .dark-layer{
+        background-color: rgba(0, 0, 0, 0.55);
+        height: 600px;
+        padding-top: var(--section-padding);
+        padding-bottom: var(--section-padding);
+    }
+    .our .content{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 
+    .our .content .image{
+        display: flex;
+        justify-content: center;
+    }
+   
+    .our .content .image img{
+       transform: translate(0px , 200px);
+    }
+    .our .content .card-container{
+        display: flex;
+        align-items: center;
+    }
+    .our .content .card{
+        color: white;
+        width: 100%;
+        padding: 50px;
+        padding-right: 350px;
+        background-color:rgb(0,197,252,0.5) ;
+    }
+    @media (max-width : 1200px ){
+        .our .content .card{
+            padding-right: 50px;
+        }
+    }
+
+
+
+    .our .content .card h2{
+        margin-bottom: 20px;
+    }
+    
+    @media (max-width : 992px ){
+        .our .content .card h2{
+            font-size: 19px;
+        }
+    }
+    .our .content .card ul{
+        list-style: none;
+
+    }
+    .our .content .card ul li{
+        padding: 20px 0px 20px 0px;
+    }
+
+    .our .content .card ul li i{
+        margin-right: 15px;
+    }
+
+    @media (max-width : 768px ){
+        .our .content .image{
+            display: none;
+        }
+
+        .our .content{
+            grid-template-columns: 1fr;
+        }
+        .our .content .card{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .our .content {
+            height: 100%;
+        }
+        
+    }
+
+/* end our */
+
+/* start portfolio */
+
+.portfolio{
+    background-color: white; 
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    text-align: center;
+}
+
+.portfolio .selector{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.portfolio .selector .selector-list{
+    list-style: none;
+    display: flex;
+}
+
+.portfolio .selector .selector-list li {
+    display: block;
+    padding: 10px;
+}
+
+.portfolio .selector .selector-list li:first-child{
+    background-color: var(--main-color);
+    color: white;
+}
+
+.portfolio-content .gal{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+@media (max-width : 1200px ) {
+    .portfolio-content .gal{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width :768px ) {
+    .portfolio-content .gal{
+        grid-template-columns: 1fr ;
+    }
+}
+.gal .gal-item{
+    position: relative;
+    overflow: hidden;
+    perspective: 100px;
+}
+.gal .gal-item img{
+    max-width: 100%;
+    transition: 0.3s;
+}
+
+.gal .gal-item:hover .image-card{
+    transform: translate(0 ,0);
+}
+
+.gal .gal-item:hover img{
+    transform: rotate(7deg) translateZ(16px);
+    
+}
+.gal .gal-item .image-card{
+    background: white;
+    text-align: left;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transform: translate(0 , 150px) ;
+    transition: 0.3s;
+}
+
+.gal .gal-item .image-card h4{
+    font-weight: unset;
+    padding-bottom: 10px;
+}
+
+.gal .gal-item .image-card h5{
+    font-weight: unset;
+    padding-bottom: 10px;
+    color: var(--main-color);
+}
+
+.portfolio .more-link{
+    margin-top: 40px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio .more-link a {
+    text-decoration: none;
+    padding: 15px;
+    color: white;
+    background-color: var(--main-color);
+    display: block;
+}
+/* start portfolio */
+
+/* start video */
+
+.video{
+   position: relative;
+}
+
+.video video{
+    max-width: 100%;
+   display: block;
+}
+
+.video .dark-layer{
+    background-color: rgba(0, 0, 0, 0.55);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.video .dark-layer  .card{
+    width: 100%;
+    background-color: rgb(0,197,252,0.5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+}
+.video .dark-layer  .card a{
+    display: block;
+    padding: 10px 30px 10px 30px;
+    color: white;
+    background-color: black;
+    text-decoration: none;
+}
+/* end video */
+
+/* start about  */
+.about{
+    height: 500px;
+    
+    overflow: hidden;
+}
+.about .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.about .container .image{
+    /* transform: translate(0 , 122px); */
+}
+/* end about */
 
 .container{
     margin: 0 auto;
