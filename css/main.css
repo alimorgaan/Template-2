@@ -834,7 +834,7 @@
     }
 /* end quote  */
 
-
+/* start pricing  */
 .pricing{
     text-align: center;
     padding-top: var(--section-padding);
@@ -843,12 +843,13 @@
 
 .pricing .container .content{
     display: grid;
-    grid-template-columns: repeat(4 , 1fr);
+    grid-template-columns: repeat(auto-fit , minmax(200px , 1fr));
+    gap: 30px;
 
 }
 
 .pricing .container .content .price-card{
-    background-color: #eee;
+    background-color: #fcfcfc;
     padding: 20px;
     padding-top: 40px;
     position: relative;
@@ -869,8 +870,24 @@
 .pricing .container .content .price-card h2{
     font-size: 50px;
     margin-bottom: 30px;
+    position: relative;
+}
+.pricing .container .content .price-card h2::after{
+    content: "/Mo";
+    position: absolute;
+    font-size: 20px;
+    bottom: 0;
+   right: 30px;
 }
 
+.pricing .container .content .price-card h2::before{
+    content: "$";
+    position: absolute;
+    top: 0;
+    font-size: 25px;
+    left: 50px;
+    font-weight: unset;
+}
 .pricing .container .content .price-card h2 + hr{
     width: calc(100% + 40px);
     border: none;
@@ -886,13 +903,56 @@
 .pricing .container .content ul li{
     padding: 20px;
     border-bottom: 1px solid var(--main-color);
+}
+
+.pricing .container .content ul li:not(:last-child){
     width: fit-content;
     margin: 0 auto;
 }
 
 .pricing .container .content ul li:last-child{
    border: none;
+   position: relative;
 }
+
+.pricing .container .content ul li:last-child::after{
+    content: "";
+    position: absolute;
+    width: calc( 100% + 40px);
+    height: 1px;
+    top: 100%;
+    background-color: var(--main-color);
+    left: -20px;
+ }
+ .pricing .container .content .price-card a{
+    display: block;
+    padding: 20px;
+    border: 1px solid var(--main-color);
+    background-color: transparent; 
+    margin-top: 20px;
+    text-decoration: none;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+ }
+ .pricing .special a{
+    display: block;
+    text-decoration: none;
+    background-color: var(--main-color);
+    color: white;
+    padding: 20px;
+    
+ }
+ .pricing .special {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+ }
+
+ /* end pricing */
 .container{
     margin: 0 auto;
     padding-left: 20px;
