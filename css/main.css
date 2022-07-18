@@ -843,7 +843,7 @@
 
 .pricing .container .content{
     display: grid;
-    grid-template-columns: repeat(auto-fit , minmax(200px , 1fr));
+    grid-template-columns: repeat(auto-fit , minmax(250px , 1fr));
     gap: 30px;
 
 }
@@ -871,13 +871,16 @@
     font-size: 50px;
     margin-bottom: 30px;
     position: relative;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 .pricing .container .content .price-card h2::after{
     content: "/Mo";
     position: absolute;
     font-size: 20px;
     bottom: 0;
-   right: 30px;
+   right: -50px;
 }
 
 .pricing .container .content .price-card h2::before{
@@ -885,7 +888,7 @@
     position: absolute;
     top: 0;
     font-size: 25px;
-    left: 50px;
+    left: -25px;
     font-weight: unset;
 }
 .pricing .container .content .price-card h2 + hr{
@@ -941,7 +944,7 @@
     background-color: var(--main-color);
     color: white;
     padding: 20px;
-    
+
  }
  .pricing .special {
     display: flex;
@@ -953,6 +956,197 @@
  }
 
  /* end pricing */
+
+ /* start email */
+.email{
+    background-image: url(../imgs/subscribe.jpg);
+    background-size: cover;
+  
+}
+
+.email .dark-layer{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.email .container{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 30px;
+}
+
+@media (max-width : 992px){
+    .email .container{
+        grid-template-columns: 1fr;
+    }
+}
+
+.email .container .input{
+   display: flex;
+   border: 1px white solid;
+   padding-left: 30px;
+}
+
+.email .container .input input{
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+
+.email .container .input input:focus{
+    border: none;
+    outline: none;
+}
+
+.email .container .input a{
+    text-decoration: none;
+    color: white;
+    background-color: #00c7fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    justify-self: flex-end;
+}
+.email .container .input i{
+    display: block;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.email .col:nth-child(2){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ /* end email */
+/* start contact */
+.contact{
+    background-color: white;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+.contact .content{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+
+
+.contact .content .col:first-child form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contact .content .col:nth-child(2){
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.contact .content form .name  {
+    padding: 15px;
+}
+
+.contact .content form .name:focus{
+    outline: none;
+}
+
+.contact .content form input:last-child{
+    padding: 15px;
+    align-self: flex-end;
+    background-color: var(--main-color);
+    border: none;
+    outline: none;
+    color: white;
+}
+.contact .content form textarea{
+    padding: 15px;
+}
+
+.contact .row:first-child h2{
+margin-bottom: 30px;
+}
+.contact .row:first-child p{
+    margin-bottom: 15px;
+}
+.contact .row:nth-child(2) h2{
+    margin-bottom: 30px;
+}
+.contact .row:nth-child(2) p{
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+@media (max-width:768px) {
+    .contact .content{
+        grid-template-columns: 1fr;
+    }
+
+    .contact .content form input:last-child{
+        align-self: center;
+    }
+.contact .row{
+    text-align: center;
+}
+    
+}
+/* end contact */
+
+
+/* start footer */
+.footer{
+    background-image: url(../imgs/subscribe.jpg); 
+    background-size: cover;
+    color: white;
+}
+
+.footer .dark-layer{
+    background-color: rgba(0, 0, 0, 0.7);
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+.footer .container .text{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+.footer .container .text h2{
+    font-weight: unset;
+}
+
+.footer .container .text hr{
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid white;
+}
+
+.footer .container .text .social{
+    font-size: 25px;
+    display: flex;
+    gap: 15px;
+}
+
+/* end footer */
 .container{
     margin: 0 auto;
     padding-left: 20px;
