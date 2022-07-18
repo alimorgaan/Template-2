@@ -993,6 +993,7 @@
     background-color: transparent;
     color: white;
     border: none;
+    flex: 1;
 }
 
 .email .container .input input:focus{
